@@ -21,7 +21,7 @@ app.use(cors({
 }));
 app.use(bodyParser.json())
 // app.use('/movies', moviesRoute)
-app.use('/movies',moviesRoute)
+app.use('/.netlify/functions/app',moviesRoute)
 connectDB();
 
 
