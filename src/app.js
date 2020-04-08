@@ -5,7 +5,7 @@ const connectDB = require('./AtlasDB/Connection')
 const app = express();
 const bodyParser=require('body-parser');
 var cors = require('cors');
-let port = 3000
+let port = 9292
 
 //import routes
 
@@ -27,4 +27,5 @@ connectDB();
 
 app.listen(port,()=>console.log("server started on port "+ port));
 
+module.exports = app
 module.exports.handler = serverless(app)
