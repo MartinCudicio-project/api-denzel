@@ -63,7 +63,7 @@ router.get('/must-watch',async(req,res)=>{
 // post method 
 // -------------------------------------------------------------------
 
-// search a movie with filters {date, meta, rate, limit } default {5,0}
+// search a movie with filters {date, meta, rate}
 router.post('/search',async(req,res)=>{
     // console.log(req.body)
 
@@ -94,7 +94,7 @@ router.post('/search',async(req,res)=>{
     }
 });
 
-// fetch a film by id
+// post a review for a film with id in body
 router.post('/review',async(req,res)=>{
     try{
         const movies = await Movies.findOneAndUpdate({
